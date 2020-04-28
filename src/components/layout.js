@@ -38,6 +38,7 @@ const TemplateWrapper = ({ children }) => {
               node {
                 profileType
                 url
+                locale
               }
             }
           }
@@ -63,14 +64,14 @@ const TemplateWrapper = ({ children }) => {
               />
               <ul className="sidebar__menu">
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/">Accueil</Link>
                 </li>
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about">À propos</Link>
                 </li>
               </ul>
               <p className="sidebar__social">
-                {data.allDatoCmsSocialProfile.edges.map(({ node: profile }) => (
+                {data.allDatoCmsSocialProfile.edges.filter(node => node.node.locale==='fr').map(({ node: profile }) => (
                   <a
                     key={profile.profileType}
                     href={profile.url}
