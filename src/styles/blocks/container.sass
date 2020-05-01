@@ -1,15 +1,14 @@
 @media screen and (max-width: 899px)
   .container__sidebar
     box-sizing: border-box
-    width: 200px
-    height: 100%
+    width: 300px
     position: fixed
     top: 0
     right: 0
     bottom: 0
     left: 0
     z-index: 2
-    transform: translate3d(-200px, 0, 0)
+    transform: translate3d(-300px, 0, 0)
     transition: transform 0.2s ease-in-out
     padding: 20px
     background-color: $light-bg-color
@@ -22,26 +21,46 @@
     transition: transform 0.2s ease-in-out
 
     .container.is-open &
-      transform: translate3d(200px, 0, 0)
+      transform: translate3d(300px, 0, 0)
 
+@media screen and (max-width: 600px)
+  .container__sidebar
+    width: 200px
+    transform: translate3d(-200px, 0, 0)
+    .sidebar__title a
+      font-size: 1.2em
+    .sidebar__intro
+      font-size: .8em
+    .sidebar__menu
+      flex-direction: column
+      li
+        width: 100px
+        a
+          font-size: .8em
+  .container__body
+    .container.is-open &
+      transform: translate3d(200px, 0, 0)
+    
 @media screen and (min-width: 900px)
   .container
     display: flex
     padding: 0
+    flex-direction: column
+    flex-wrap: wrap
 
   .container__mobile-header
     display: none
 
   .container__sidebar
     display: block
-    width: 30%
+    width: 100%
     min-width: 320px
     box-sizing: border-box
-    padding: 40px
+    padding: 20px 40px
     background-color: $light-bg-color
 
   .container__body
-    flex: 1
+    width: 100%
 
   .container__body--white
     background-color: white

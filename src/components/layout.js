@@ -70,21 +70,6 @@ const TemplateWrapper = ({ children }) => {
                   <Link to="/about">À propos</Link>
                 </li>
               </ul>
-              <p className="sidebar__social">
-                {data.allDatoCmsSocialProfile.edges.filter(node => node.node.locale==='fr').map(({ node: profile }) => (
-                  <a
-                    key={profile.profileType}
-                    href={profile.url}
-                    target="blank"
-                    className={`social social--${profile.profileType.toLowerCase()}`}
-                  >
-                    {" "}
-                  </a>
-                ))}
-              </p>
-              <div className="sidebar__copyright">
-                {data.datoCmsHome.copyright}
-              </div>
             </div>
           </div>
           <div className="container__body">
@@ -104,6 +89,23 @@ const TemplateWrapper = ({ children }) => {
               </div>
             </div>
             {children}
+            <footer>
+              <p className="sidebar__social">
+                {data.allDatoCmsSocialProfile.edges.filter(node => node.node.locale==='fr').map(({ node: profile }) => (
+                  <a
+                    key={profile.profileType}
+                    href={profile.url}
+                    target="blank"
+                    className={`social social--${profile.profileType.toLowerCase()}`}
+                  >
+                    {" "}
+                  </a>
+                ))}
+              </p>
+              <div className="sidebar__copyright">
+                {data.datoCmsHome.copyright}
+              </div>
+            </footer>
           </div>
         </div>
       )}

@@ -1,6 +1,31 @@
 .card
   box-shadow: 0 0 5px #ccc
+  border: 3px solid white
+  border-radius: 3px
+  width: 100%
 
+
+.card__description
+  position: absolute
+  top: 5px
+  display: none
+  color: black
+  background-color: transparent
+  z-index: 10
+  font-weight: bold
+  font-size: 14px
+  line-height: 1.3
+  padding: 8px
+
+.card:hover
+  border-color: black
+  .card__image
+    &:before
+      opacity: 1
+    &:after
+      opacity: .4
+  .card__description
+    display: block
 .card__image
   display: block
   position: relative
@@ -20,33 +45,23 @@
     left: 0
     width: 100%
     height: 100%
-    background-color: rgba(white, 0.7)
+    background-color: rgba(white, 0.8)
 
   &:after
     width: 80px
     height: 80px
-    background: url('https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/svgs/fi-magnifying-glass.svg')
-    background-position: 50% 50%
-    background-repeat: no-repeat
-    background-size: contain
     top: 50%
     left: 50%
     margin-left: -40px
     margin-top: -40px
 
-  &:hover
-    &:before
-      opacity: 1
-
-    &:after
-      opacity: .5
-
 .card__caption
   background-color: white
-  padding: 20px;
+  height: 60px
 
 .card__title
-  margin-bottom: 10px
+  font-size: 12px
+  text-align: center
 
   a
     text-transform: uppercase
@@ -55,10 +70,3 @@
     font-size: 16px
     color: $dark-body-color
 
-    &:hover
-      border-bottom: dotted 1px #9055a2
-
-.card__description
-  color: $light-body-color
-  font-size: 14px
-  line-height: 1.4

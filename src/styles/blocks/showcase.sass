@@ -1,32 +1,51 @@
 .showcase.is-loading
   visibility: hidden
 
+.showcase
+  width: 100%
+  margin: 0 auto
+  position: relative
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-content: stretch
+  justify-content: space-around
+
 .showcase__item
-  margin-bottom: 30px
+  margin-bottom: 25px
+  position: relative
+  min-width: 140px
+  padding: 0 5px
+  width: 45%
+  max-width: 180px
+  &>a
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+.swiper-container
+  height: 300px
+  max-height: 40vh
+  width: 90%
+  max-width: 1000px
+  margin: 0 auto 1em
+  .swiper-slide
+    width: 90%
+    background-color: red
 
-@media screen and (max-width: 400px)
+@media screen and (min-width: 500px)
   .showcase
-    margin: 0 15px
-
-@media screen and (min-width: 401px)
+    width: 500px
+@media screen and (min-width: 600px)
   .showcase
-    margin-right: 15px
-
+    width: 100%
   .showcase__item
-    box-sizing: border-box
-    width: (100% / 2)
-    float: left
-    padding-left: 15px
-
-@media screen and (min-width: 1400px)
-  .showcase__item
-    width: (100% / 3)
-
+    width: 22%
 @media screen and (min-width: 900px)
   .showcase
-    padding: 40px 0 10px
-    margin-right: 40px
+    width: 900px
 
-@media screen and (min-width: 1100px)
+@media screen and (min-width: 1250px)
+  .showcase
+    width: 98%
   .showcase__item
-    padding-left: 40px
+    width: 10%
