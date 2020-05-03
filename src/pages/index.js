@@ -10,6 +10,9 @@ const IndexPage = ({ data }) => {
     new Swiper('.swiper-container', {
       effect: 'coverflow',
       spaceBetween: 20,
+      autoplay: {
+        delay: 5000,
+      },
       grabCursor: true,
       longSwipes: true,
       longSwipesRatio: 0.15,
@@ -36,17 +39,11 @@ const IndexPage = ({ data }) => {
 return (
   <Layout>
     <div className="swiper-container">
+      <h2 className="title">Quelques réalisations</h2>
       <div className="swiper-wrapper">
-        <div className="swiper-slide">Slide 1</div>
-        <div className="swiper-slide">Slide 2</div>
-        <div className="swiper-slide">Slide 3</div>
-        <div className="swiper-slide">Slide 4</div>
-        <div className="swiper-slide">Slide 5</div>
-        <div className="swiper-slide">Slide 6</div>
-        <div className="swiper-slide">Slide 7</div>
-        <div className="swiper-slide">Slide 8</div>
-        <div className="swiper-slide">Slide 9</div>
-        <div className="swiper-slide">Slide 10</div>
+        {data.allDatoCmsHome.edges.filter(edge => edge.node.locale==='fr')[0].node.homePictures.map((pictures) => (
+            <div className="swiper-slide"><Img fluid={pictures.fluid} imgStyle={{height: "auto", width: 'auto'}} /></div>
+          ))}
       </div>
       <div className="swiper-pagination"></div>
       <div className="swiper-button-prev"></div>
@@ -57,12 +54,12 @@ return (
         <div key={work.id} className="showcase__item">
           <Link to={`/works/${work.slug}`}>
             <figure className="card">
-              <Link to={`/works/${work.slug}`} className="card__image">
+              <div className="card__image">
                 <Img fluid={work.coverImage.fluid} />
-              </Link>
+              </div>
               <figcaption className="card__caption">
                 <h6 className="card__title">
-                  <Link to={`/works/${work.slug}`}>{work.title}</Link>
+                  {work.title}
                 </h6>
                 <div className="card__description">
                   <p>{work.excerpt}</p>
@@ -79,6 +76,18 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
+    allDatoCmsHome {
+      edges {
+        node {
+          locale
+          homePictures {
+            fluid(maxWidth: 1000, imgixParams: { fm: "jpg", auto: "compress"}) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
+        }
+      }
+    }
     allDatoCmsWork(sort: { fields: [position], order: ASC }) {
       edges {
         node {

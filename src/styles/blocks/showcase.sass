@@ -21,16 +21,26 @@
   &>a
     text-decoration: none
     &:hover
-      text-decoration: underline
+      text-decoration: underline black
+
 .swiper-container
-  height: 300px
-  max-height: 40vh
+  min-height: 200px
+  height: auto
+  max-height: 90vh
   width: 90%
   max-width: 1000px
-  margin: 0 auto 1em
+  margin: -1em auto 1em
+  .title
+    padding-bottom: .3em
+    text-align: center
+    font-size: 24px
+    font-weight: bold
+    position: relative
+    text-decoration: underline
   .swiper-slide
     width: 90%
-    background-color: red
+    background-color: darkgrey
+
 
 @media screen and (min-width: 500px)
   .showcase
