@@ -69,6 +69,9 @@ const TemplateWrapper = ({ children }) => {
                 <li>
                   <Link to="/about">À propos</Link>
                 </li>
+                <li>
+                  <Link to="/contact">Contact</Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -105,6 +108,10 @@ const TemplateWrapper = ({ children }) => {
               <div className="sidebar__copyright">
                 {data.datoCmsHome.copyright}
               </div>
+              <div className="links-utils">
+                <Link to="/conditions-d-utilisation" id="conditions_utilisation">Conditions d'utilisations</Link>
+                <Link to="/mentions-legales">Mentions Légales</Link>
+              </div>
             </footer>
           </div>
         </div>
@@ -114,7 +121,7 @@ const TemplateWrapper = ({ children }) => {
 };
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.array
 };
 
 export default TemplateWrapper;

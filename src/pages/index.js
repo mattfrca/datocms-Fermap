@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import 'swiper/css/swiper.css'
 
 const IndexPage = ({ data }) => {
+
   useEffect( () => {
     new Swiper('.swiper-container', {
       effect: 'coverflow',
@@ -30,7 +31,7 @@ const IndexPage = ({ data }) => {
       pagination: {
       el: '.swiper-pagination',
       },
-      loop: true,
+      loop: false,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -38,17 +39,6 @@ const IndexPage = ({ data }) => {
   }, [])
 return (
   <Layout>
-    <div className="swiper-container">
-      <h2 className="title">Quelques réalisations</h2>
-      <div className="swiper-wrapper">
-        {data.allDatoCmsHome.edges.filter(edge => edge.node.locale==='fr')[0].node.homePictures.map((pictures) => (
-            <div className="swiper-slide"><Img fluid={pictures.fluid} imgStyle={{height: "auto", width: 'auto'}} /></div>
-          ))}
-      </div>
-      <div className="swiper-pagination"></div>
-      <div className="swiper-button-prev"></div>
-      <div className="swiper-button-next"></div>
-    </div>
     <div className="showcase">
       {data.allDatoCmsWork.edges.filter(edge => edge.node.locale==='fr' && edge.node.affichage).map(({ node: work }) => (
         <div key={work.id} className="showcase__item">
@@ -69,6 +59,17 @@ return (
           </Link>
         </div>
       ))}
+    </div>
+    <div className="swiper-container" style={{padding: '1em 0 2.5em', backgroundColor: '#fff', border: '2px solid black', marginTop: '1em'}}>
+      <h2 className="title">Quelques réalisations</h2>
+      <div className="swiper-wrapper">
+        {data.allDatoCmsHome.edges.filter(edge => edge.node.locale==='fr')[0].node.homePictures.map((pictures, index) => (
+            <div key={index} className="swiper-slide"><Img fluid={pictures.fluid} imgStyle={{height: "auto", width: 'auto'}} /></div>
+          ))}
+      </div>
+      <div className="swiper-pagination"></div>
+      <div className="swiper-button-prev"></div>
+      <div className="swiper-button-next"></div>
     </div>
   </Layout>
 )}

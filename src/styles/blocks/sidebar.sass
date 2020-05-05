@@ -14,7 +14,7 @@
       border-color: $dark-body-color
 
 .sidebar__intro
-  color: $light-body-color
+  color: #444
   font-size: 16px
   margin-bottom: 20px
 
@@ -28,6 +28,8 @@
   margin-bottom: 5px
   display: flex
   flex-direction: row
+  margin: 0 auto
+  width: fit-content
 
   li
     margin: 5px 10px 5px 0
@@ -50,7 +52,6 @@
       color: $active-color
 
 .sidebar__social
-  margin-top: 20px
   text-align: center
   margin-bottom: 10px
   .social
@@ -61,3 +62,26 @@
   font-size: 13px
   text-align: center
   margin: 1em
+
+@media (min-width: 900px) and (min-height: 500px)
+  .sidebar__menu
+    li
+      a
+        font-size: 1.1em
+  .sidebar__title
+    a
+      font-size: 30px
+  .sidebar__intro
+    font-size: 20px
+  .sidebar__copyright
+    font-size: 16px
+
+.links-utils
+  display: block
+  margin: -1em auto 1em
+  a
+    color: #666
+    display: block
+    width: fit-content
+    margin: 0 auto
+    font-size: .9em

@@ -60,7 +60,7 @@ useEffect(() => {
     modifier: 1,
     slideShadows : true,
     },
-    loop: true,
+    loop: false,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -72,12 +72,6 @@ mySwiper.on('slideChange', () => {
 })
 }, [])
 
-
-  // const showDetails = (evt) => {
-  //   evt.target.innerText === 'En savoir plus ...' ? evt.target.innerText = 'Retour' : evt.target.innerText = 'En savoir plus ...'
-  //   let entireText = htmlTextArray[evt.target.classList[1]]
-  //   console.log(entireText)
-  // }
   return(
   <Layout>
     <article className="sheet">
@@ -91,14 +85,13 @@ mySwiper.on('slideChange', () => {
               {[Array(data.datoCmsWork.nombreDeSlides).fill(1).map((x,index) => {
                 return (
                 <div className="swiper-slide" key={index}>
-                  <Img fluid={picturesArray[index].fluid} style={{minHeight: '50%', height: 'auto', maxHeight: '70vh', width: '100%', margin: '0 auto'}} />
+                  <Img fluid={picturesArray[index].fluid} style={{height: '100%', width: 'auto', margin: '0 auto'}} imgStyle={{height: '100%'}} />
                   <div
                     className="sheet__body"
                     dangerouslySetInnerHTML={{
                       __html: htmlTitleArray[index]
                     }}
                   />
-                  {/* <button className={`button__modal ${index}`} onClick={showDetails}>En savoir plus ...</button> */}
                 </div>
               )})]
               }
