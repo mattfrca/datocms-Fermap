@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 const Contact = () => {
   return (
   <Layout>
-    <form className="contact-form" name="formulaire-contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true">
+    <form className="contact-form" name="formulaire-contact" method="POST" action="/" data-netlify-honeypot="bot-field" data-netlify="true">
+    <input type="hidden" name="form-name" value="formulaire-contact" />
         <p>
             <label>Nom complet <span>*</span><input type="text" name="name" /></label>   
         </p>
