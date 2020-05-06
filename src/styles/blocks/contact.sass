@@ -1,3 +1,14 @@
+// .main-wrapper-contact
+//     width: 100%
+//     display: flex
+//     flex-wrap: wrap
+//     flex-direction: row
+    // .section-wrapper-contact
+    //     width: 20%
+    // .section-wrapper-contact.form-contact
+    //     width: 80%
+
+
 .contact-form
     min-width: 240px
     width: 80%
@@ -7,6 +18,12 @@
     padding: 1em
     background-color: #ffffff
     border: 2px solid #bd1220
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    .column
+        width: 100%
     p
         padding: .5em
         span
@@ -14,10 +31,11 @@
             font-weight: bold
         input, textarea
             margin-top: .3em
-            width: 95%
-            padding: .3em .8em
+            width: 90%
+            padding: .3em .5em
             font-size: 1em
         textarea
+            padding: .5em
             resize: none
             height: 15vh
             overflow-y: auto
@@ -45,3 +63,57 @@
         width: 100%
         color: #444
         font-size: 0.8em
+    .column.type-projet
+        width: 100%
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+
+        h3
+            width: 100%
+            color: #bd1220
+            font-size: 1.2em
+            font-weight: bold
+            padding: 0 0 .5em
+        p
+            font-size: .8em
+            width: 49%
+            padding: .3em 0
+            input
+                width: fit-content
+                margin: 0
+                margin-right: 8px
+        .wrapper-type-echeance
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            justify-content: space-between
+            width: 100%
+            .echeance,.type-batiment
+                width: 100%
+                p
+                    width: 100%
+
+@media (min-width: 900px)
+    .contact-form
+        min-width: 700px
+        max-width: 1000px
+        font-size: 1.2em
+        .column
+            width: 48%
+            p
+                font-size: 22px
+        .validation
+            width: 60%
+            margin: 1em auto
+            font-size: 1.2em
+        .column.type-projet
+            width: 48%
+            h3
+                font-size: 1.3em
+            p
+                font-size: 22px
+            .wrapper-type-echeance
+                .echeance,.type-batiment
+                    width: 50%
