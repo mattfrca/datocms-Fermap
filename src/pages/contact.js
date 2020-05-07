@@ -9,8 +9,8 @@ const Contact = () => {
         <h2>Notre site de production</h2>
         <div>
             <h3>Fermap Forbach</h3>
-            <img src="https://www.ardevie.fr/images/liens/87fermap.jpg" alt="Image du Bâtiment de Fermap au Technopôle"/>
-            <p>Adresse: <a href="https://www.google.com/maps/place/FERMAP/@49.161079,6.9282583,17z/data=!3m1!4b1!4m5!3m4!1s0x4795b28c69785c11:0x7234720ef2358b1c!8m2!3d49.161079!4d6.930447" alt="Lien google map Adresse Fermap" target="_blank" rel="noopener">Technopôle de Forbach - Rue Faraday "Folkling" - 57600 FORBACH</a></p>
+            <img src="https://www.ardevie.fr/images/liens/87fermap.jpg" alt="Bâtiment de Fermap au Technopôle"/>
+            <p>Adresse: <a href="https://www.google.com/maps/place/FERMAP/@49.161079,6.9282583,17z/data=!3m1!4b1!4m5!3m4!1s0x4795b28c69785c11:0x7234720ef2358b1c!8m2!3d49.161079!4d6.930447" alt="Lien google map Adresse Fermap" target="_blank" rel="noopener noreferrer">Technopôle de Forbach - Rue Faraday "Folkling" - 57600 FORBACH</a></p>
             <p>Tél: <a href="tel:0387871008" alt="Telephone de l'accueil de fermap" >03.87.87.10.08</a></p>
             <p>Mail: <a href="mailto:info@fermap.fr" alt="Lien pour envoyer un mail à Fermap">info@fermap.fr</a></p>
         </div>
@@ -45,64 +45,64 @@ const Contact = () => {
             <div className="column type-projet">
                 <h3>Type de projet</h3>
                 <p>
-                    <label><input type="checkbox" name="Fenêtre PVC :" value="Vrai" />Fenêtre PVC</label>
+                    <label><input type="checkbox" name="Fenêtre PVC :" value="***** OUI *****" />Fenêtre PVC</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Fenêtre Alu :" value="Vrai" />Fenêtre ALU</label>
+                    <label><input type="checkbox" name="Fenêtre Alu :" value="***** OUI *****" />Fenêtre ALU</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Porte d'entrée Alu :" value="Vrai"/>Porte d'entrée ALU</label>
+                    <label><input type="checkbox" name="Porte d'entrée Alu :" value="***** OUI *****"/>Porte d'entrée ALU</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Porte d'entrée PVC :" value="Vrai"/>Porte d'entrée PVC</label>
+                    <label><input type="checkbox" name="Porte d'entrée PVC :" value="***** OUI *****"/>Porte d'entrée PVC</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Volets Roulants :" value="Vrai"/>Volets roulants</label>
+                    <label><input type="checkbox" name="Volets Roulants :" value="***** OUI *****"/>Volets roulants</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="BSO :" value="Vrai"/>Brise Soleil Orientable</label>
+                    <label><input type="checkbox" name="BSO :" value="***** OUI *****"/>Brise Soleil Orientable</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Porte de garage :" value="Vrai"/>Porte de garage</label>
+                    <label><input type="checkbox" name="Porte de garage :" value="***** OUI *****"/>Porte de garage</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Portail :" value="Vrai"/>Portail</label>
+                    <label><input type="checkbox" name="Portail :" value="***** OUI *****"/>Portail</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Garde Corps :" value="Vrai"/>Garde Corps</label>
+                    <label><input type="checkbox" name="Garde Corps :" value="***** OUI *****"/>Garde Corps</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Clôture :" value="Vrai"/>Clôture</label>
+                    <label><input type="checkbox" name="Clôture :" value="***** OUI *****"/>Clôture</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="Alarme :" value="Vrai"/>Alarme</label>
+                    <label><input type="checkbox" name="Alarme :" value="***** OUI *****"/>Alarme</label>
                 </p>
                 <div className="wrapper-type-echeance">
                     <div className="echeance">
                         <h3>Echéance de votre projet</h3>
                         <p>
-                            <label><input type="checkbox" name="Maintenant :" value="Vrai"/>De suite</label>
+                            <label><input type="checkbox" name="Maintenant :" value="***** OUI *****"/>De suite</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="3 à 6 mois :" value="Vrai"/>Dans 3 à 6 mois</label>
+                            <label><input type="checkbox" name="3 à 6 mois :" value="***** OUI *****"/>Dans 3 à 6 mois</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="6 à 12 mois :" value="Vrai"/>Dans 6 à 12 mois</label>
+                            <label><input type="checkbox" name="6 à 12 mois :" value="***** OUI *****"/>Dans 6 à 12 mois</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="Non Planifié :" value="Vrai"/>Non planifié</label>
+                            <label><input type="checkbox" name="Non Planifié :" value="***** OUI *****"/>Non planifié</label>
                         </p>
                     </div>
                     <div className="type-batiment">
                         <h3>Type de bâtiment</h3>
                         <p>
-                            <label><input type="checkbox" name="Bâtiment Neuf :" value="Vrai"/>Bâtiment neuf</label>
+                            <label><input type="checkbox" name="Bâtiment Neuf :" value="***** OUI *****"/>Bâtiment neuf</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="Rénovation :" value="Vrai"/>Rénovation</label>
+                            <label><input type="checkbox" name="Rénovation :" value="***** OUI *****"/>Rénovation</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="Immeuble Collectif :" value="Vrai"/>Immeuble collectif</label>
+                            <label><input type="checkbox" name="Immeuble Collectif :" value="***** OUI *****"/>Immeuble collectif</label>
                         </p>
                     </div>
                 </div>
@@ -111,8 +111,8 @@ const Contact = () => {
                 <p>
                     <label>Utilisation des données <span>*</span><input required id="utilisation-donnees" type="checkbox" value="En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
                     dans le cadre de la demande de contact et de la relation commerciale qui peut en découler."></input>
-                    <label id="description-utilisation-donnees">En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
-                    dans le cadre de la demande de contact et de la relation commerciale qui peut en découler.</label></label>
+                    <p id="description-utilisation-donnees">En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
+                    dans le cadre de la demande de contact et de la relation commerciale qui peut en découler.</p></label>
                 </p>
                 <input aria-label="button" id="send-button" value="Envoyer" type="submit" className="contact-form-btn"/>
                 <p><span>*</span> : Champs obligatoires</p>
