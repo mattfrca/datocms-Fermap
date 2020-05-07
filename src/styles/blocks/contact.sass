@@ -1,12 +1,45 @@
-// .main-wrapper-contact
-//     width: 100%
-//     display: flex
-//     flex-wrap: wrap
-//     flex-direction: row
-    // .section-wrapper-contact
-    //     width: 20%
-    // .section-wrapper-contact.form-contact
-    //     width: 80%
+.main-wrapper-contact
+    width: 100%
+    display: flex
+    flex-wrap: wrap
+    flex-direction: row
+    justify-content: space-around
+    .section-wrapper-contact
+        width: 100%
+        h2
+            text-align: center
+            font-size: 1.5em
+            color: #bd1220
+            margin: 1em 0
+    .section-wrapper-contact.form-contact
+        width: 100%
+    .section-wrapper-contact.production-site
+        div
+            min-width: 240px
+            width: 80%
+            max-width: 500px
+            margin: 0 auto
+            background-color: white
+            border: 2px solid #bd1220
+            padding: 1em
+            img
+                display: block
+                width: 90%
+                margin: 0 auto 1em
+            h3
+                text-align: center
+                color: #000000
+                font-size: 1.2em
+                margin: 0 0 .5em
+            p
+                padding: .2em .5em
+                font-size: 1em
+                a
+                    color: #1B998B
+                    transition: all .4s
+                    &:hover
+                        color: #e71d36
+
 
 
 .contact-form
@@ -96,6 +129,14 @@
                     width: 100%
 
 @media (min-width: 900px)
+    .main-wrapper-contact
+        .section-wrapper-contact
+            h2
+                font-size: 1.8em
+        .section-wrapper-contact.production-site
+            div
+                font-size: 1.2em
+        
     .contact-form
         min-width: 700px
         max-width: 1000px
@@ -117,3 +158,21 @@
             .wrapper-type-echeance
                 .echeance,.type-batiment
                     width: 50%
+
+@media (min-width: 1200px)
+    .main-wrapper-contact
+        .section-wrapper-contact.production-site
+            min-width: 300px
+            width: fit-content
+            max-width: 28%
+            div
+                min-width: 230px
+                width: 100%
+                max-width: 600px
+                font-size: 1.2em
+        .section-wrapper-contact.form-contact
+            min-width: 800px
+            width: 70%
+            max-width: 1000px
+            .contact-form
+                width: 80%

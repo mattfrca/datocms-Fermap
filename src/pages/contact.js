@@ -5,28 +5,38 @@ const Contact = () => {
   return (
   <Layout>
   <div className="main-wrapper-contact">
-    <div className="section-wrapper-contact">
-        <h2>Nos agences</h2>
+    <div className="section-wrapper-contact production-site">
+        <h2>Notre site de production</h2>
+        <div>
+            <h3>Fermap Forbach</h3>
+            <img src="https://www.ardevie.fr/images/liens/87fermap.jpg" alt="Image du Bâtiment de Fermap au Technopôle"/>
+            <p>Adresse: <a href="https://www.google.com/maps/place/FERMAP/@49.161079,6.9282583,17z/data=!3m1!4b1!4m5!3m4!1s0x4795b28c69785c11:0x7234720ef2358b1c!8m2!3d49.161079!4d6.930447" alt="Lien google map Adresse Fermap" target="_blank" rel="noopener">Technopôle de Forbach - Rue Faraday "Folkling" - 57600 FORBACH</a></p>
+            <p>Tél: <a href="tel:0387871008" alt="Telephone de l'accueil de fermap" >03.87.87.10.08</a></p>
+            <p>Mail: <a href="mailto:info@fermap.fr" alt="Lien pour envoyer un mail à Fermap">info@fermap.fr</a></p>
+        </div>
     </div>
-    <div className="section-wrapper-contact">
+    <div className="section-wrapper-contact form-contact">
         <h2>Formulaire de contact</h2>
         <form className="contact-form" name="formulaire-contact" method="POST" action="/" data-netlify-honeypot="bot-field" data-netlify="true">
             <input type="hidden" name="form-name" value="formulaire-contact" />
             <div className="column">
                 <p>
-                    <label>Nom complet <span>*</span><input type="text" name="name" required /></label>   
+                    <label>Nom complet <span>*</span><input type="text" name="Nom Complet :" required /></label>   
                 </p>
                 <p>
-                    <label>Adresse mail <span>*</span><input type="email" name="email" required /></label>
+                    <label>Adresse mail <span>*</span><input type="email" name="Email :" required /></label>
                 </p>
                 <p>
-                    <label>Ville <span>*</span><input type="text" name="ville" required /></label>
+                    <label>Téléphone <span>*</span><input type="text" name="Téléphone :" required /></label>
                 </p>
                 <p>
-                    <label>Adresse <span>*</span><input type="text" name="adresse" required /></label>
+                    <label>Ville <span>*</span><input type="text" name="Ville :" required /></label>
                 </p>
                 <p>
-                    <label>Code postal <span>*</span><input type="text" name="code_postal" required /></label>
+                    <label>Adresse <span>*</span><input type="text" name="Adresse :" required /></label>
+                </p>
+                <p>
+                    <label>Code postal <span>*</span><input type="text" name="Code Postal :" required /></label>
                 </p>
                 <p>
                     <label>Message<textarea name="message" /></label>
@@ -35,64 +45,64 @@ const Contact = () => {
             <div className="column type-projet">
                 <h3>Type de projet</h3>
                 <p>
-                    <label><input type="checkbox" name="fenetre_pvc" value="fenetre_pvc" />Fenêtre PVC</label>
+                    <label><input type="checkbox" name="Fenêtre PVC :" value="Vrai" />Fenêtre PVC</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="fenetre_alu" value="fenetre_alu" />Fenêtre ALU</label>
+                    <label><input type="checkbox" name="Fenêtre Alu :" value="Vrai" />Fenêtre ALU</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="porte_d_entree_alu" value="porte_d_entree_alu"/>Porte d'entrée ALU</label>
+                    <label><input type="checkbox" name="Porte d'entrée Alu :" value="Vrai"/>Porte d'entrée ALU</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="porte_d_entree_pvc" value="porte_d_entree_pvc"/>Porte d'entrée PVC</label>
+                    <label><input type="checkbox" name="Porte d'entrée PVC :" value="Vrai"/>Porte d'entrée PVC</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="volets_roulants" value="volets_roulants"/>Volets roulants</label>
+                    <label><input type="checkbox" name="Volets Roulants :" value="Vrai"/>Volets roulants</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="bso" value="bso"/>Brise Soleil Orientable</label>
+                    <label><input type="checkbox" name="BSO :" value="Vrai"/>Brise Soleil Orientable</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="porte_de_garage" value="porte_de_garage"/>Porte de garage</label>
+                    <label><input type="checkbox" name="Porte de garage :" value="Vrai"/>Porte de garage</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="portail" value="portail"/>Portail</label>
+                    <label><input type="checkbox" name="Portail :" value="Vrai"/>Portail</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="garde_corps" value="garde_corps"/>Garde Corps</label>
+                    <label><input type="checkbox" name="Garde Corps :" value="Vrai"/>Garde Corps</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="clôture" value="clôture"/>Clôture</label>
+                    <label><input type="checkbox" name="Clôture :" value="Vrai"/>Clôture</label>
                 </p>
                 <p>
-                    <label><input type="checkbox" name="alarme" value="alarme"/>Alarme</label>
+                    <label><input type="checkbox" name="Alarme :" value="Vrai"/>Alarme</label>
                 </p>
                 <div className="wrapper-type-echeance">
                     <div className="echeance">
                         <h3>Echéance de votre projet</h3>
                         <p>
-                            <label><input type="checkbox" name="maintenant" value="maintenant"/>De suite</label>
+                            <label><input type="checkbox" name="Maintenant :" value="Vrai"/>De suite</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="3_6_mois" value="3_6_mois"/>Dans 3 à 6 mois</label>
+                            <label><input type="checkbox" name="3 à 6 mois :" value="Vrai"/>Dans 3 à 6 mois</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="6_12_mois" value="6_12_mois"/>Dans 6 à 12 mois</label>
+                            <label><input type="checkbox" name="6 à 12 mois :" value="Vrai"/>Dans 6 à 12 mois</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="non_planifié" value="non_planifié"/>Non planifié</label>
+                            <label><input type="checkbox" name="Non Planifié :" value="Vrai"/>Non planifié</label>
                         </p>
                     </div>
                     <div className="type-batiment">
                         <h3>Type de bâtiment</h3>
                         <p>
-                            <label><input type="checkbox" name="batiment_neuf" value="batiment_neuf"/>Bâtiment neuf</label>
+                            <label><input type="checkbox" name="Bâtiment Neuf :" value="Vrai"/>Bâtiment neuf</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="rénovation" value="rénovation"/>Rénovation</label>
+                            <label><input type="checkbox" name="Rénovation :" value="Vrai"/>Rénovation</label>
                         </p>
                         <p>
-                            <label><input type="checkbox" name="immeuble_collectif" value="immeuble_collectif"/>Immeuble collectif</label>
+                            <label><input type="checkbox" name="Immeuble Collectif :" value="Vrai"/>Immeuble collectif</label>
                         </p>
                     </div>
                 </div>
@@ -104,7 +114,7 @@ const Contact = () => {
                     <label id="description-utilisation-donnees">En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
                     dans le cadre de la demande de contact et de la relation commerciale qui peut en découler.</label></label>
                 </p>
-                <input id="send-button" value="Envoyer" type="submit" className="contact-form-btn"/>
+                <input aria-label="button" id="send-button" value="Envoyer" type="submit" className="contact-form-btn"/>
                 <p><span>*</span> : Champs obligatoires</p>
             </div>
         </form>
