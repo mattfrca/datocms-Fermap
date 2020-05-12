@@ -60,7 +60,7 @@ return (
         </div>
       ))}
     </div>
-    <div className="swiper-container" style={{padding: '1em 0 2.5em', backgroundColor: '#fff', border: '2px solid black', marginTop: '1em'}}>
+    <div className="swiper-container" style={{padding: '1em 0 2.5em', backgroundColor: '#1e2936', marginTop: '1em'}}>
       <h2 className="title">Quelques réalisations</h2>
       <div className="swiper-wrapper">
         {data.allDatoCmsHome.edges.filter(edge => edge.node.locale==='fr')[0].node.homePictures.map((pictures, index) => (
@@ -68,8 +68,8 @@ return (
           ))}
       </div>
       <div className="swiper-pagination"></div>
-      <div className="swiper-button-prev"></div>
-      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev" style={{color: "#fff"}}></div>
+      <div className="swiper-button-next" style={{color: "#fff"}}></div>
     </div>
   </Layout>
 )}

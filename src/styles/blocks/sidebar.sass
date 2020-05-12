@@ -2,19 +2,15 @@
   margin-bottom: 20px
 
   a
-    font-size: 24px
+    font-size: .9em
+    font-family: "New Brilliant", sans-serif
     text-transform: uppercase
     font-weight: bold
     text-decoration: none
-    color: $dark-body-color
-    transition: all .5s
-    border-bottom: solid 3px transparent
-
-    &:hover
-      border-color: $dark-body-color
+    color: #e9ecef
 
 .sidebar__intro
-  color: #444
+  color: #e9ecef
   font-size: 16px
   margin-bottom: 20px
 
@@ -65,18 +61,24 @@
 
 @media (min-width: 900px) and (min-height: 500px)
   .sidebar__menu
-    background-color: #bd1220
-    padding: .5em 0
-    border-radius: 8px
+    margin-bottom: 10px
     li
       margin: 0 2em
       a
         font-size: 1.1em
   .sidebar__title
+    text-align: center
+    margin: 0
     a
-      font-size: 30px
+      font-size: 60px
+      font-family: "New Brilliant", sans-serif
   .sidebar__intro
-    font-size: 20px
+    display: none
+    // font-size: 16px
+    // position: absolute
+    // width: 30%
+    // top: 30px
+    // right: 5px
   .sidebar__copyright
     font-size: 16px
 
@@ -89,3 +91,5 @@
     width: fit-content
     margin: 0 auto
     font-size: .9em
+    &:hover
+      color: black

@@ -1,7 +1,9 @@
 import React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from "../components/layout"
 
-const Contact = () => {
+const Contact = ({ data: { about } }) => {
   return (
   <Layout>
   <div className="main-wrapper-contact">
@@ -9,7 +11,7 @@ const Contact = () => {
         <h2>Notre site de production</h2>
         <div>
             <h3>Fermap Forbach</h3>
-            <img src="https://www.ardevie.fr/images/liens/87fermap.jpg" alt="Bâtiment de Fermap au Technopôle"/>
+            <Img fluid={about.carteDeVisite.fluid} alt="Carte de visite de Fermap au Technopôle de Forbach" style={{width: "90%", margin: "0 auto 1em"}}  imgStyle={{objectFit: "fill"}} />
             <p>Adresse: <a href="https://www.google.com/maps/place/FERMAP/@49.161079,6.9282583,17z/data=!3m1!4b1!4m5!3m4!1s0x4795b28c69785c11:0x7234720ef2358b1c!8m2!3d49.161079!4d6.930447" alt="Lien google map Adresse Fermap" target="_blank" rel="noopener noreferrer">Technopôle de Forbach - Rue Faraday "Folkling" - 57600 FORBACH</a></p>
             <p>Tél: <a href="tel:0387871008" alt="Telephone de l'accueil de fermap" >03.87.87.10.08</a></p>
             <p>Mail: <a href="mailto:info@fermap.fr" alt="Lien pour envoyer un mail à Fermap">info@fermap.fr</a></p>
@@ -125,3 +127,15 @@ const Contact = () => {
 )}
 
 export default Contact
+
+export const query = graphql`
+  query PictureQuery {
+    about: datoCmsAboutPage {
+      carteDeVisite {
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
+    }
+  }
+`

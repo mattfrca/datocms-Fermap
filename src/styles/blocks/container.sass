@@ -1,4 +1,7 @@
 @media screen and (max-width: 899px)
+  .container__mobile-header
+    background-color: #1e2936
+    margin-bottom: 1em
   .container__sidebar
     box-sizing: border-box
     width: 300px
@@ -11,8 +14,10 @@
     transform: translate3d(-300px, 0, 0)
     transition: transform 0.2s ease-in-out
     padding: 20px
-    background-color: $light-bg-color
-    border-right: 1px solid #444
+    background-color: #1e2936
+
+    .sidebar__menu
+      flex-direction: column
 
     .container.is-open &
       transform: translate3d(0px, 0, 0);
@@ -29,7 +34,8 @@
     width: 200px
     transform: translate3d(-200px, 0, 0)
     .sidebar__title a
-      font-size: 1.2em
+      font-size: .9em
+      font-family: "New Brilliant", sans-serif
     .sidebar__intro
       font-size: .8em
     .sidebar__menu
@@ -57,8 +63,9 @@
     width: 100%
     min-width: 320px
     box-sizing: border-box
-    padding: 20px 40px
-    background-color: $light-bg-color
+    padding: 0px 40px 0
+    background-color: #1e2936
+    margin-bottom: 20px
 
   .container__body
     width: 100%
