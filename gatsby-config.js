@@ -1,8 +1,12 @@
 require('dotenv').config()
 
 module.exports = {
+  // proxy: {
+  //   prefix: "/fermap",
+  //   url: "http://localhost:8080",
+  // },
   siteMetadata: {
-    title: `Creative Portfolio`,
+    title: `Fermap`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

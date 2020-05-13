@@ -3,7 +3,7 @@ import { HelmetDatoCms } from 'gatsby-source-datocms'
 import Img from 'gatsby-image'
 import Swiper from 'swiper'
 import 'swiper/css/swiper.css'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Layout from "../components/layout"
 
 export default ({ data }) => {
@@ -96,12 +96,15 @@ mySwiper.on('slideChange', () => {
               )})]
               }
             </div>
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
+            <div className="swiper-button-prev" style={{color: "#000"}}></div>
+            <div className="swiper-button-next" style={{color: "#000"}}></div>
           </div> :
           <div className="sheet__gallery">	
             <Img fluid={data.datoCmsWork.coverImage.fluid} />	
           </div>}
+          <div className="view-products">
+            <Link to="/formulaire-documentation">Voir la documentation complète de nos gammes</Link>
+          </div>
           <div
             id="descriptionCurrent"
             className="sheet__body"

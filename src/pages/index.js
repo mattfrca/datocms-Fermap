@@ -16,8 +16,8 @@ const IndexPage = ({ data }) => {
       },
       grabCursor: true,
       longSwipes: true,
-      longSwipesRatio: 0.15,
-      longSwipesMs: 100,
+      longSwipesRatio: 0.10,
+      longSwipesMs: 50,
       shortSwipes: false,
       centeredSlides: true,
       slidesPerView: 'auto',
@@ -67,7 +67,7 @@ return (
             <div key={index} className="swiper-slide"><Img fluid={pictures.fluid} imgStyle={{height: "auto", width: 'auto'}} /></div>
           ))}
       </div>
-      <div className="swiper-pagination"></div>
+      <div className="swiper-pagination" style={{color: "#fff"}}></div>
       <div className="swiper-button-prev" style={{color: "#fff"}}></div>
       <div className="swiper-button-next" style={{color: "#fff"}}></div>
     </div>

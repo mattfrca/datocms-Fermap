@@ -19,7 +19,7 @@ const Contact = ({ data: { about } }) => {
     </div>
     <div className="section-wrapper-contact form-contact">
         <h2>Formulaire de contact</h2>
-        <form className="contact-form" name="formulaire-contact" method="POST" action="/" data-netlify-honeypot="bot-field" data-netlify="true">
+        <form className="contact-form" name="formulaire-contact" method="POST" action="/formulaire-envoi" data-netlify-honeypot="bot-field" data-netlify="true">
             <input type="hidden" name="form-name" value="formulaire-contact" />
             <div className="column">
                 <p>
@@ -113,8 +113,8 @@ const Contact = ({ data: { about } }) => {
                 <p>
                     <label>Utilisation des données <span>*</span><input required id="utilisation-donnees" type="checkbox" value="En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
                     dans le cadre de la demande de contact et de la relation commerciale qui peut en découler."></input>
-                    <p id="description-utilisation-donnees">En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
-                    dans le cadre de la demande de contact et de la relation commerciale qui peut en découler.</p></label>
+                    <span id="description-utilisation-donnees">En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
+                    dans le cadre de la demande de documentation et de la relation commerciale qui peut en découler.</span></label>
                 </p>
                 <input aria-label="button" id="send-button" value="Envoyer" type="submit" className="contact-form-btn"/>
                 <p><span>*</span> : Champs obligatoires</p>

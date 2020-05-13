@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Stefano Verna <s.verna@datocms.com>",
   "dependencies": {
+    "axios": "^0.19.2",
     "dotenv": "^8.1.0",
     "gatsby": "^2.20.0",
     "gatsby-cli": "^2.12.12",
