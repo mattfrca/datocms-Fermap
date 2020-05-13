@@ -52,9 +52,10 @@ const TemplateWrapper = ({ children }) => {
           />
           <div className="container__sidebar">
             <div className="sidebar">
-              <h6 className="sidebar__title">
+              <h4 className="sidebar__title">
                 <Link to="/">{data.datoCmsSite.globalSeo.siteName.substr(0,6)}</Link>
-              </h6>
+                <p>{data.datoCmsSite.globalSeo.siteName.substr(9)}</p>
+              </h4>
               <div
                 className="sidebar__intro"
                 dangerouslySetInnerHTML={{
@@ -88,6 +89,7 @@ const TemplateWrapper = ({ children }) => {
                 </div>
                 <div className="mobile-header__logo">
                   <Link to="/">{data.datoCmsSite.globalSeo.siteName.substr(0,6)}</Link>
+                  <p>{data.datoCmsSite.globalSeo.siteName.substr(9)}</p>
                 </div>
               </div>
             </div>

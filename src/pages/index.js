@@ -36,7 +36,7 @@ const IndexPage = ({ data }) => {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },})
-  }, [])
+  }, []);
 return (
   <Layout>
     <div className="showcase">
@@ -45,7 +45,7 @@ return (
           <Link to={`/works/${work.slug}`}>
             <figure className="card">
               <div className="card__image">
-                <Img fluid={work.coverImage.fluid} />
+                <Img fluid={work.coverImage.fluid} alt={work.coverImage.alt} />
               </div>
               <figcaption className="card__caption">
                 <h6 className="card__title">
@@ -64,12 +64,20 @@ return (
       <h2 className="title">Quelques réalisations</h2>
       <div className="swiper-wrapper">
         {data.allDatoCmsHome.edges.filter(edge => edge.node.locale==='fr')[0].node.homePictures.map((pictures, index) => (
-            <div key={index} className="swiper-slide"><Img fluid={pictures.fluid} imgStyle={{height: "auto", width: 'auto'}} /></div>
+            <div key={index} className="swiper-slide"><Img fluid={pictures.fluid} imgStyle={{height: "auto", width: 'auto'}} alt={pictures.alt} /></div>
           ))}
       </div>
       <div className="swiper-pagination" style={{color: "#fff"}}></div>
       <div className="swiper-button-prev" style={{color: "#fff"}}></div>
       <div className="swiper-button-next" style={{color: "#fff"}}></div>
+    </div>
+    <div className="container-logos">
+      <div className="logo_fabricant_francais">
+        <Img fluid={data.allDatoCmsHome.edges.filter(edge => edge.node.locale==='fr')[0].node.logoFermapFabricantFrancais.fluid} />
+      </div>
+      <div className="logo_schuco">
+        <Img fluid={data.allDatoCmsHome.edges.filter(edge => edge.node.locale==='fr')[0].node.logoSchucoPartner.fluid} />
+      </div>
     </div>
   </Layout>
 )}
@@ -80,8 +88,19 @@ export const query = graphql`
     allDatoCmsHome {
       edges {
         node {
+          logoFermapFabricantFrancais {
+            fluid(maxWidth: 400, imgixParams: { fm: "jpg", auto: "compress"}) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
+          logoSchucoPartner {
+            fluid(maxWidth: 400, imgixParams: { fm: "jpg", auto: "compress"}) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
           locale
           homePictures {
+            alt
             fluid(maxWidth: 1000, imgixParams: { fm: "jpg", auto: "compress"}) {
               ...GatsbyDatoCmsSizes
             }
@@ -99,6 +118,7 @@ export const query = graphql`
           locale
           excerpt
           coverImage {
+            alt
             fluid(maxWidth: 450, imgixParams: { fm: "png", auto: "compress" }) {
               ...GatsbyDatoCmsSizes
             }

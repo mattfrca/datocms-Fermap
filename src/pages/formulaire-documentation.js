@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import Layout from "../components/layout"
 import { navigate } from 'gatsby'
 
 const Documentation = () => {
+    useEffect(()=> {
+        axios.get('https://fermap.herokuapp.com/fermap/wake-up').then().catch();
+    }, []);
     const popUp = (success, mailValue) => {
         const formElement = document.getElementsByClassName('form-documentation')[0];
         switch (success) {
@@ -35,6 +38,7 @@ const Documentation = () => {
         popUp('waiting', mailValue)
         axios.post(
             'https://fermap.herokuapp.com/fermap/send-documentation',
+            // 'http://localhost:8080/fermap/send-documentation',
             {
                 nameValue,
                 mailValue,

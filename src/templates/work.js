@@ -85,7 +85,7 @@ mySwiper.on('slideChange', () => {
               {[Array(data.datoCmsWork.nombreDeSlides).fill(1).map((x,index) => {
                 return (
                 <div className="swiper-slide" key={index}>
-                  <Img fluid={picturesArray[index].fluid} style={{height: '100%', width: 'auto', margin: '0 auto'}} imgStyle={{height: '100%'}} />
+                  <Img fluid={picturesArray[index].fluid} alt={picturesArray[index].alt} style={{height: '100%', width: 'auto', margin: '0 auto'}} imgStyle={{height: '100%'}} />
                   <div
                     className="sheet__body"
                     dangerouslySetInnerHTML={{
@@ -100,7 +100,7 @@ mySwiper.on('slideChange', () => {
             <div className="swiper-button-next" style={{color: "#000"}}></div>
           </div> :
           <div className="sheet__gallery">	
-            <Img fluid={data.datoCmsWork.coverImage.fluid} />	
+            <Img fluid={data.datoCmsWork.coverImage.fluid} alt={data.datoCmsWork.coverImage.alt} />	
           </div>}
           <div className="view-products">
             <Link to="/formulaire-documentation">Voir la documentation complète de nos gammes</Link>
@@ -163,42 +163,49 @@ export const query = graphql`
         }
       }
       image1 {
+        alt
         url
         fluid(maxWidth: 400, maxHeight: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       image2 {
+        alt
         url
         fluid(maxWidth: 400, maxHeight: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       image3 {
+        alt
         url
         fluid(maxWidth: 400, maxHeight: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       image4 {
+        alt
         url
         fluid(maxWidth: 400, maxHeight: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       image5 {
+        alt
         url
         fluid(maxWidth: 400, maxHeight: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       image6 {
+        alt
         url
         fluid(maxWidth: 400, maxHeight: 400, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }
       coverImage {
+        alt
         url
         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes

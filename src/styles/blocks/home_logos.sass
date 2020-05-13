@@ -1,0 +1,53 @@
+.logo_fabricant_francais
+    margin: 0 auto -15px
+    width: 200px
+    position: relative
+    top: -30px
+
+.logo_schuco
+    margin: 0 auto 30px
+    position: relative
+    top: -40px
+    width: 200px
+
+@media (min-width: 500px)
+    .container-logos
+        display: flex
+        justify-content: center
+        align-content: center
+        align-items: center
+        width: 90%
+        margin: -15px auto 
+
+        .logo_fabricant_francais
+            margin: -20px auto
+            width: 200px
+            position: static
+
+        .logo_schuco
+            margin: 0 auto
+            width: 200px
+            position: static
+
+@media (min-width: 1400px)
+    .container-logos
+        width: 100%
+        position: absolute
+        .logo_fabricant_francais
+            position: absolute
+            left: calc((100vw - 1400px) / 4 )
+            top: -460px
+        .logo_schuco
+            position: absolute
+            right: calc((100vw - 1400px) / 4 )
+            top: -430px
+@media (min-width: 1650px)
+    .container-logos
+        .logo_fabricant_francais
+            width: 250px
+            left: calc((100vw - 1500px) / 4 )
+            top: -490px
+        .logo_schuco
+            width: 250px
+            right: calc((100vw - 1500px) / 4 )
+            top: -440px
