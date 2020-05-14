@@ -89,7 +89,7 @@ export const query = graphql`
       edges {
         node {
           logoFermapFabricantFrancais {
-            fluid(maxWidth: 400, imgixParams: { fm: "jpg", auto: "compress"}) {
+            fluid(maxWidth: 400, imgixParams: { fm: "png", auto: "compress"}) {
               ...GatsbyDatoCmsSizes
             }
           }
