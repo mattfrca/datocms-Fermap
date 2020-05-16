@@ -16,6 +16,8 @@
     padding: 20px
     background-color: #1e2936
     overflow-y: auto
+    .sidebar__background
+      display: none
 
     .sidebar__menu
       flex-direction: column
@@ -49,12 +51,12 @@
   .container__body
     .container.is-open &
       transform: translate3d(200px, 0, 0)
-@media screen and (min-width: 650px) and (max-width: 900px)
+@media screen and (min-width: 650px) and (max-width: 899px)
   .container__sidebar
     .sidebar__title a
       font-size: 1.3em
 
-@media screen and (min-width: 900px)
+@media screen and (min-width: 899px)
   .container
     display: flex
     padding: 0
@@ -70,8 +72,26 @@
     min-width: 320px
     box-sizing: border-box
     padding: 0px 40px 0
-    background-color: #1e2936
+    // background-color: #1e293655
     margin-bottom: 20px
+    .sidebar__background
+      display: block
+      position: absolute
+      top: 0
+      height: 169px
+      z-index: -5
+    .sun-bg
+      width: 21%
+      left: 0
+      background-size: cover
+    .stars-bg
+      width: 80%
+      left: 20%
+      background-size: cover
+    .earth-bg
+      width: 20%
+      left: 80%
+      background-size: cover
 
   .container__body
     width: 100%

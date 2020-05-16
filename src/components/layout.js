@@ -6,6 +6,11 @@ import { Link } from "gatsby";
 import { StaticQuery, graphql } from "gatsby";
 import { HelmetDatoCms } from "gatsby-source-datocms";
 
+import backgroundImageSun from '../images/Soleil_FERMAP_web_200.png';
+import backgroundImageEarth from '../images/Planete_FERMAP_web_200.png';
+import backgroundImageStars from '../images/Sky_200.png';
+
+
 import "../styles/index.sass";
 
 const TemplateWrapper = ({ children }) => {
@@ -51,6 +56,9 @@ const TemplateWrapper = ({ children }) => {
             seo={data.datoCmsHome.seoMetaTags}
           />
           <div className="container__sidebar">
+            <div className="sun-bg sidebar__background" style={{backgroundImage: `url(${backgroundImageSun})`}}></div>
+            <div className="stars-bg sidebar__background" style={{backgroundImage: `url(${backgroundImageStars})`}}></div>
+            <div className="earth-bg sidebar__background" style={{backgroundImage: `url(${backgroundImageEarth})`}}></div>
             <div className="sidebar">
               <h4 className="sidebar__title">
                 <Link to="/">{data.datoCmsSite.globalSeo.siteName.substr(0,6)}</Link>
