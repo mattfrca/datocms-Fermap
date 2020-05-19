@@ -89,6 +89,9 @@ const TemplateWrapper = ({ children }) => {
           </div>
           <div className="container__body">
             <div className="container__mobile-header">
+              <div className="sun-bg sidebar__background" style={{backgroundImage: `url(${backgroundImageSun})`}}></div>
+              <div className="stars-bg sidebar__background" style={{backgroundImage: `url(${backgroundImageStars})`}}></div>
+              <div className="earth-bg sidebar__background" style={{backgroundImage: `url(${backgroundImageEarth})`}}></div>
               <div className="mobile-header">
                 <div className="mobile-header__menu">
                   <button
