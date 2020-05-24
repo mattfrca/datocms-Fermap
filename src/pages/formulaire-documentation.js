@@ -24,6 +24,7 @@ const Documentation = () => {
                 break;
             case 'waiting':
                 formElement.innerHTML = `<p class="infos__formulaire__documentation waiting">Nous sommes en train de vous envoyé un mail sur <span>${mailValue}</span>.</p>, veuillez patienter...`;
+                break;
             default:
                 setTimeout(() => { navigate('/'); }, 10000)
                 break;

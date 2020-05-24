@@ -79,13 +79,13 @@ mySwiper.on('slideChange', () => {
       <div className="sheet__inner">
         <h1 className="sheet__title">{data.datoCmsWork.title}</h1>
         <p className="sheet__lead">{data.datoCmsWork.excerpt}</p>
-        {data.datoCmsWork.nombreDeSlides > 0 ? 
+        {data.datoCmsWork.multiplesPages ? 
           <div className="swiper-container sheet__slider">
             <div className="swiper-wrapper">
               {[Array(data.datoCmsWork.nombreDeSlides).fill(1).map((x,index) => {
                 return (
                 <div className="swiper-slide" key={index}>
-                  <Img fluid={picturesArray[index].fluid} alt={picturesArray[index].alt} style={{height: '100%', width: 'auto', margin: '0 auto'}} imgStyle={{height: '100%'}} />
+                  <Img fluid={picturesArray[index].fluid} alt={picturesArray[index].alt} style={{height: '100%', width: 'auto',minWidth:'300px', margin: '0 auto'}} imgStyle={{height: '100%'}} />
                   <div
                     className="sheet__body"
                     dangerouslySetInnerHTML={{
@@ -100,7 +100,7 @@ mySwiper.on('slideChange', () => {
             <div className="swiper-button-next" style={{color: "#000"}}></div>
           </div> :
           <div className="sheet__gallery">	
-            <Img fluid={data.datoCmsWork.coverImage.fluid} alt={data.datoCmsWork.coverImage.alt} />	
+            <Img fluid={data.datoCmsWork.image1.fluid} alt={data.datoCmsWork.image1.alt} style={{width: '90%', maxWidth: '1000px', margin: '0 auto 1em'}} />	
           </div>}
           <div className="view-products">
             <Link to="/formulaire-documentation">Voir la documentation complète de nos gammes</Link>
