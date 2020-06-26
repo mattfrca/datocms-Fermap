@@ -13,13 +13,13 @@ const Documentation = () => {
             case true:
                 formElement.innerHTML = `<p class="infos__formulaire__documentation good">Un mail vient de vous être envoyé sur <span>${mailValue}</span>,
                 cela peut prendre quelques minutes avant de le recevoir, veuillez aussi vérifiez votre boite de spam.
-                Vous allez être redirigé vers la page d'acceuil.</p>`;
+                Vous allez être redirigé vers la page d'accueil.</p>`;
                 setTimeout(() => { navigate('/'); }, 10000)
                 break;
             case false:
                 formElement.innerHTML = `<p class="infos__formulaire__documentation">Nous avons essayé de vous envoyé un mail sur <span>${mailValue}</span>,
                 cela a échoué, veuillez vérifier votre adresse mail. Si c'est bien votre adresse, il se peut qu'il y ait eu une erreur serveur.
-                Vous allez être redirigé vers la page d'acceuil.</p>`;
+                Vous allez être redirigé vers la page d'accueil.</p>`;
                 setTimeout(() => { navigate('/'); }, 10000)
                 break;
             case 'waiting':
@@ -78,7 +78,7 @@ const Documentation = () => {
                 <p>
                     <label>Utilisation des données <span>*</span><input required id="utilisation-donnees" type="checkbox" value="En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
                     dans le cadre de la demande de contact et de la relation commerciale qui peut en découler."></input>
-                    <span id="description-utilisation-donnees">En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées
+                    <span id="description-utilisation-donnees">En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées
                     dans le cadre de la demande de documentation et de la relation commerciale qui peut en découler.</span></label>
                 </p>
                 <input aria-label="button" id="send-button" value="Envoyer" type="submit" className="contact-form-btn"/>
